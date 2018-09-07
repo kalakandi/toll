@@ -61,8 +61,7 @@ public class First extends AppCompatActivity implements PaymentResultListener {
         try {
             JSONObject options = new JSONObject();
             options.put("name", "Razorpay Corp");
-            options.put("description", "Demoing Charges");
-            //You can omit the image option to fetch the image from dashboard
+            options.put("description", "Toll Charges");
             options.put("image", "https://rzp-mobile.s3.amazonaws.com/images/rzp.png");
             options.put("currency", "INR");
 
@@ -73,8 +72,8 @@ public class First extends AppCompatActivity implements PaymentResultListener {
             options.put("amount", total);
 
             JSONObject preFill = new JSONObject();
-            preFill.put("email", "sikander@gkmit.co");
-            preFill.put("contact", "9680224241");
+            preFill.put("email", "");
+            preFill.put("contact", "");
 
             options.put("prefill", preFill);
 
