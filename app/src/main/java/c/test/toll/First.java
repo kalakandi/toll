@@ -27,6 +27,7 @@ public class First extends AppCompatActivity implements PaymentResultListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+
         findViews();
         listeners();
     }
@@ -34,7 +35,9 @@ public class First extends AppCompatActivity implements PaymentResultListener {
     public void findViews() {
         buttonConfirmOrder = (Button) findViewById(R.id.buttonConfirmOrder);
         editTextPayment = (EditText) findViewById(R.id.editTextPayment);
+
     }
+
 
     public void listeners() {
 
