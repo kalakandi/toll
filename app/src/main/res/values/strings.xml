@@ -3,4 +3,7 @@
     <string name="start_monitoring">Start Monitoring</string>
     <string name="main_head">Welcome to smart TOLL PLAZA app!!!</string>
     <string name="welcome_to_smart_toll_plaza_app">Welcome to Smart TOLL PLAZA App.</string>
+    <string name="type_payment_what_you_are_paying">Type Payment what you are paying?</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="pay">Pay</string>
 </resources>
