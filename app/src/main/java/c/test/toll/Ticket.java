@@ -31,39 +31,34 @@ public class Ticket extends AppCompatActivity {
             public void onClick(View view) {
                 if(op1.isChecked()){
                     Toast.makeText(getApplicationContext(),""+op1.getText().toString(),Toast.LENGTH_SHORT).show();
-                    abc="60";
-                    sendMessage();
-                    // Intent intent = new Intent(Ticket.this,First.class);
-                  //  startActivity(intent);
+                    Intent intent = new Intent(Ticket.this,First.class);
+                    intent.putExtra("hello", 570);
+                    startActivity(intent);
 
                 }
                 else if(op2.isChecked()){
                     Toast.makeText(getApplicationContext(),""+op2.getText().toString(),Toast.LENGTH_SHORT).show();
-                    abc="120";
-                    sendMessage();
-                    // Intent intent2 = new Intent(Ticket.this,First.class);
-                   //startActivity(intent2);
+                    Intent intent2 = new Intent(Ticket.this,First.class);
+                    intent2.putExtra("hello", 570);
+                    startActivity(intent2);
                 }
                 else if(op3.isChecked()){
                     Toast.makeText(getApplicationContext(),""+op3.getText().toString(),Toast.LENGTH_SHORT).show();
-                    abc="185";
-                    sendMessage();
-                    // Intent intent3 = new Intent(Ticket.this,First.class);
-                    //startActivity(intent3);
+                    Intent intent3 = new Intent(Ticket.this,First.class);
+                    intent3.putExtra("hello", 570);
+                    startActivity(intent3);
                 }
                 else if(op4.isChecked()){
                     Toast.makeText(getApplicationContext(),""+op4.getText().toString(),Toast.LENGTH_SHORT).show();
-                    abc="375";
-                    sendMessage();
-                    // Intent intent4 = new Intent(Ticket.this,First.class);
-                   // startActivity(intent4);
+                    Intent intent4 = new Intent(Ticket.this,First.class);
+                    intent4.putExtra("hello", 570);
+                    startActivity(intent4);
                 }
-                else if(op5.isChecked()){
-                    Toast.makeText(getApplicationContext(),""+op5.getText().toString(),Toast.LENGTH_SHORT).show();
-                    abc="570";
-                    sendMessage();
-                    //    Intent intent5 = new Intent(Ticket.this,First.class);
-                 //   startActivity(intent5);
+                else if(op5.isChecked()) {
+                    Toast.makeText(getApplicationContext(), "" + op5.getText().toString(), Toast.LENGTH_SHORT).show();
+                    Intent intent5 = new Intent(Ticket.this,First.class);
+                    intent5.putExtra("hello", 570);
+                    startActivity(intent5);
                 }
             }
         });
@@ -71,10 +66,6 @@ public class Ticket extends AppCompatActivity {
 
 
     }
-    public void sendMessage() {
-        Intent intent = new Intent(this, First.class);
-        String message = abc;
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }
+
+
 }

@@ -24,12 +24,15 @@ public class First extends AppCompatActivity implements PaymentResultListener {
 
     private Button buttonConfirmOrder;
     private EditText editTextPayment;
+    Bundle extras;
+    int value;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        
+        extras=getIntent().getExtras();
+        value=extras.getInt("EXTRA_MESSAGE");
         findViews();
         listeners();
     }
@@ -37,7 +40,7 @@ public class First extends AppCompatActivity implements PaymentResultListener {
     public void findViews() {
         buttonConfirmOrder = (Button) findViewById(R.id.buttonConfirmOrder);
         editTextPayment = (EditText) findViewById(R.id.editTextPayment);
-        editTextPayment.setText(message);
+        editTextPayment.setText(value);
 
     }
 
