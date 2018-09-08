@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
@@ -19,20 +20,14 @@ import org.json.JSONObject;
 
 public class First extends AppCompatActivity implements PaymentResultListener {
 
-    Intent intent = getIntent();
-    String message = intent.getStringExtra(Ticket.EXTRA_MESSAGE);
-
     private Button buttonConfirmOrder;
     private EditText editTextPayment;
-    Bundle extras;
-    int value;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        extras=getIntent().getExtras();
-        value=extras.getInt("EXTRA_MESSAGE");
+
         findViews();
         listeners();
     }
@@ -40,8 +35,6 @@ public class First extends AppCompatActivity implements PaymentResultListener {
     public void findViews() {
         buttonConfirmOrder = (Button) findViewById(R.id.buttonConfirmOrder);
         editTextPayment = (EditText) findViewById(R.id.editTextPayment);
-        editTextPayment.setText(value);
-
     }
 
 
@@ -97,7 +90,8 @@ public class First extends AppCompatActivity implements PaymentResultListener {
     @Override
     public void onPaymentSuccess(String razorpayPaymentID) {
         Toast.makeText(this, "Payment successfully done! " + razorpayPaymentID, Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(First.this,qrcode.class);
+        startActivity(intent);
     }
 
     @Override

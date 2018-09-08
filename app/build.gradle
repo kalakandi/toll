@@ -20,6 +20,7 @@ android {
 
 repositories {
     mavenCentral();
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -30,4 +31,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.razorpay:checkout:1.4.9'
+    implementation 'com.github.kenglxn.QRGen:android:2.2.0'
 }

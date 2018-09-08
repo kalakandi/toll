@@ -22,19 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-            <activity android:name=".First"
+        <activity
+            android:name=".First"
             android:parentActivityName=".Ticket">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Ticket" />
         </activity>
+
         <meta-data
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_0Q9QUVz0kaWmK3" />
 
         <activity android:name=".Ticket" />
+        <activity android:name=".qrcode"></activity>
     </application>
 
 </manifest>
