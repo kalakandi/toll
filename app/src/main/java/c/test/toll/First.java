@@ -2,6 +2,7 @@ package c.test.toll;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,8 @@ import org.json.JSONObject;
 
 public class First extends AppCompatActivity implements PaymentResultListener {
 
+    Intent intent = getIntent();
+    String message = intent.getStringExtra(Ticket.EXTRA_MESSAGE);
 
     private Button buttonConfirmOrder;
     private EditText editTextPayment;
@@ -26,8 +29,7 @@ public class First extends AppCompatActivity implements PaymentResultListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-
-
+        
         findViews();
         listeners();
     }
@@ -35,6 +37,7 @@ public class First extends AppCompatActivity implements PaymentResultListener {
     public void findViews() {
         buttonConfirmOrder = (Button) findViewById(R.id.buttonConfirmOrder);
         editTextPayment = (EditText) findViewById(R.id.editTextPayment);
+        editTextPayment.setText(message);
 
     }
 
